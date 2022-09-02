@@ -10,14 +10,17 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 function getRandomCard() {
-    return 5
+    return Math.floor( Math.random()*13 ) +1
 }
 
 function startGame() {
     renderGame()
 }
 function renderGame() {
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1]
+    cardsEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
     sumEl.textContent = "sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
