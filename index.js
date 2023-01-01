@@ -9,12 +9,12 @@ let cardsEl = document.getElementById("cards-el")
 
 let player = {
     name: "Sammy",
-    chips: 145
+    chips: 0
 }
 
 
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips
+playerEl.textContent = player.name + ": $" + player.chips 
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -28,6 +28,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+    hasBlackJack = false;
     isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -37,6 +38,7 @@ function startGame() {
 }
 
 function renderGame() {
+
     cardsEl.textContent = "Cards: "
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
@@ -63,4 +65,5 @@ function newCard() {
         cards.push(card)
         renderGame()
     }
+    
 }
