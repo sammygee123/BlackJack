@@ -1,7 +1,9 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("blackjack.jpeg");
-    background-size: cover;
+    background-image: linear-gradient(to bottom right,#0f432b,#716935);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -9,6 +11,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin: 0%;
 
 }
 
